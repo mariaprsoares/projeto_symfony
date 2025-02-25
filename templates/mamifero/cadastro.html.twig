@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title%}Cadastro de Animais{% endblock %}
+
+{% block body %}
+
+    <h1>Cadastro de Animais</h1>
+    <form>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="especie">Especie</label>
+        <input type="text" name="especie" id="especie">
+
+        <label for="idade">Idade</label>
+        <input type="text" name="idade" id="idade">
+
+        <input type="submit" value="Cadastrar">
+    </form>
+
+{% endblock %}

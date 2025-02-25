@@ -3,3 +3,9 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+mamifero_homepage:
+    path: /
+    controller: App\Controller\MamiferoController::homepage
+mamifero_cadastro:
+    path: /cadastro
+    controller: App\Controller\MamiferoController::cadastro
