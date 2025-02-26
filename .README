@@ -1,0 +1,30 @@
+#INICIAR O PROJETO
+-- symfony serve
+
+#Conectar no banco de dados 
+-- DATABASE_URL="mysql://root:@127.0.0.1:3306/symfony_veterinaria?serverVersion=8.0&charset=utf8mb4"
+
+#Criar o banco de dados
+-- php bin/console doctrine:database:create
+
+#Gerar a nova migração
+-- php bin/console make:migration
+
+#Migrar as tabelas do banco de dados
+-- php bin/console doctrine:migrations:migrate
+-- php bin/console doctrine:schema:update --force
+
+#Excluir o banco de dados
+mysql -u root -e "DROP DATABASE symfony_veterinaria;"
+
+#Remover as migrações existentes
+-- Remove-Item -Path "C:\xampp\htdocs\www\projeto_symfony\migrations\*.php"
+
+#Criar uma nova entidade
+-- php bin/console make:entity Animal
+
+#Criar a controller DonoController:
+php bin/console make:controller DonoController
+
+#Criar o formulário DonoType:
+php bin/console make:form DonoType
